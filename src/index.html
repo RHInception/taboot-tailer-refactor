@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Taboot Tailer - Enterprise Edition</title>
+
+    <!-- Load jQuery and some helper add-ons -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.timer.js"></script>
+    <script type="text/javascript" src="js/querystring-0.9.0.js"></script>
+
+    <!-- Load the Taboot Tailer configuration for this installation -->
+    <script type="text/javascript" src="js/site_conf.js"></script>
+
+    <!-- Load the js for filling the list of log files and sites-->
+    <script type="text/javascript" src="js/taboot_tailer.js"></script>
+
+    <!-- Load the main Taboot Tailer code -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- STYLE SHEETS -->
+    <!-- You shouldn't modify the Twitter Bootstrap or Taboot Tailer css -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/taboot_tailer.css" rel="stylesheet" media="screen">
+
+    <!-- Put any special site customizations in here -->
+    <link href="css/site_conf.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <!-- Load the Twitter Bootstrap JavaScript -->
+    <script src="js/bootstrap.js"></script>
+
+    <div class="container-fluid">
+      <!-- Give us a little more padding from the top of the display -->
+      <div class="row-fluid">
+        <div class="span12">
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        <div class="span3">
+	  <!-- This UL holds the tabs to select sites. The tab labels
+	  are the keys from the SITES variable
+
+          If you have a lot of sites you might benefit from using a
+          menubar dropdown instead:
+
+              http://twitter.github.com/bootstrap/javascript.html#dropdowns
+
+          Taboot Tailer doesn't support this functionality natively
+	  though so you'll have to hack that in yourself -->
+          <ul class="nav nav-tabs" id="sites">
+          </ul>
+
+	  <!-- Message displayed while the list of log files is populated -->
+          <ul id="loglist" class="nav nav-list">
+            <li id="logsloading" class="disabled"><a><i class="loading"></i> hold on while the list loads...</a></li>
+          </ul>
+        </div>
+
+	<!-- 'fillme' is the div updated by the JS with log file content -->
+        <div id="fillme" class="span9 well">
+	  <!-- You can customize the initial welcome message below -->
+          <p class="lead">Select a log file to follow from the list on the left</p>
+          <ul>
+            <li>Logs are checked every 5 seconds</li>
+            <li>New data is displayed at the end</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alert box that appears whenever new content is loaded -->
+    <div class="span3">
+      <div class="alert alert-info" id="new_content_alert">
+        <i class="icon-plus icon-white"></i> new content loaded
+      </div>
+    </div>
+
+    <div class="navbar">
+      <div class="navbar-inner navbar-fixed-top">
+	<!-- Site branding -->
+        <span class="pull-left"><a class="brand" href="index.html">Taboot Tailer - <em>Enterprise Edition</em></a></span>
+
+	<!-- Button to toggle autoscrolling -->
+        <span class="pull-right">
+          <ul class="nav">
+            <li id="li-toggle_autoscroll"><a title="toggle autoscroll" rel="tooltip"><i class="icon-arrow-down"></i></a></li>
+          </ul>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

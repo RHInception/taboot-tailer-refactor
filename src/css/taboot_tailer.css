@@ -1,0 +1,54 @@
+/*
+ * Move down so the page isn't obscured by the navbar
+ */
+body {
+    padding-top: 40px;
+}
+
+/*
+ * Controls for hidden/displayed items when the MAX_DISPLAY_LOGS
+ * threshold has been met
+ */
+.log_display-true {
+    display: inline;
+}
+
+.log_display-false {
+    display: none;
+}
+
+/*
+ * Hide the 'be patient while loading' message by default
+ */
+#logsloading {
+    display: none;
+}
+
+/*
+ * Style for the animation of the 'be patient while loading' icon
+ *
+ * Icon created using http://www.ajaxload.info/
+ */
+.loading {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("../img/loading.gif");
+  background-repeat: no-repeat;
+}
+
+/*
+ * Style the new content alert box
+ */
+#new_content_alert {
+    display: none;
+    margin-right: 20px;
+    position: fixed;
+    z-index: 10;
+    bottom: 0px;
+    right: 0px;
+}
