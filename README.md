@@ -13,6 +13,7 @@ Web Server
 
 Do the following on each server you are exposing logs from:
 
-* Place `conf/taboot_tailer.conf` into your apache configuration directory, usually `/etc/httpd/conf.d/`
+* Place `conf/taboot_tailer.conf` and `taboot_tailer_site.conf` into your apache configuration directory, usually `/etc/httpd/conf.d/`
 * Do any necessary configuration in `taboot_tailer.conf`
-* Reload your server configs (e.g., `service httpd reload` or `systemctl reload httpd`)
+* Configure `taboot_tailer_site.conf` to point to the location you deployed the taboot-tailer code to
+* Reload your server configs (e.g., `service httpd reload` or `systemctl reload httpd.service`)
