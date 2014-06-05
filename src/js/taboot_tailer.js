@@ -17,7 +17,7 @@ $(document).ready(function(){
         $.ajax({
             url: SITES[CURRENT_SITE] + SORT_STRING,
             cache: false,
-            dataType: 'html',
+            dataType: 'text',
             success: function(data) {
                 build_log_list(data);
             },
@@ -43,7 +43,7 @@ $(document).ready(function(){
             $.ajax({
                 url: SITES[CURRENT_SITE] + SORT_STRING,
                 cache: false,
-                dataType: 'html',
+                dataType: 'text',
                 success: function(data) {
                     build_log_list(data);
                 },
