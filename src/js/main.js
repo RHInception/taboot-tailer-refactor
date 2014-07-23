@@ -235,7 +235,7 @@ function refresh_log_file(log, offset) {
             // for autoscroll functionality.
             add_new_content_marker();
             // Add new content to the view
-            $("#fillme").append(data);
+            $("#fillme pre").append(data);
             scroll_to_new_content();
         },
     };
